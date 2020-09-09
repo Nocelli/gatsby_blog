@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div id='page-layout'>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div>
         <main>{children}</main>
@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
           <a href="https://github.com/Nocelli">Rafael Nocelli Soares</a>
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 
