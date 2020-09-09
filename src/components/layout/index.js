@@ -21,10 +21,10 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div>
         <main>{children}</main>
-        <footer>
+        <footer className='footer'>
           © {new Date().getFullYear()}, Feito por
           {` `}
-          <a href="https://github.com/Nocelli">Rafael Nocelli Soares</a>
+          <a className='footer-link' href="https://github.com/Nocelli">Rafael Nocelli Soares</a>
         </footer>
       </div>
     </div>
