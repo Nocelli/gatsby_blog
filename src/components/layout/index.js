@@ -21,12 +21,13 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div>
         <main>{children}</main>
-        <footer className='footer'>
-          © {new Date().getFullYear()}, Feito por
-          {` `}
-          <a className='footer-link' href="https://github.com/Nocelli">Rafael Nocelli Soares</a>
-        </footer>
       </div>
+      <footer className='footer'>
+          Copyright © {new Date().getFullYear()}, Feito por
+          {/* Target _blank é para que o usuário não saia do seu site quando clicar no link,
+          apenas abra outra aba/janela */}
+          <a className='footer-link' href="https://github.com/Nocelli" target="_blank"> Rafael Nocelli Soares (Guinomo)</a>
+        </footer>
     </div>
   )
 }

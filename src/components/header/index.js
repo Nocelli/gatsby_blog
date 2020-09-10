@@ -5,17 +5,17 @@ import React from "react"
 
 import "./styles.css"
 
-const Header = ({ siteTitle }) => (
-  <header id='header'>
+function Header({ siteTitle }) { 
+  return <header id="header">
     <div>
       <h1>
-        <Link to="/">
+        <Link to="/" id="hash-link">
           {siteTitle}
-        </Link> 
+        </Link>
       </h1>
     </div>
-  </header>
-)
+  </header> 
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
