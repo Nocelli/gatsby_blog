@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
           Copyright © {new Date().getFullYear()}, Feito por
           {/* Target _blank é para que o usuário não saia do seu site quando clicar no link,
           apenas abra outra aba/janela */}
-          <a className='footer-link' href="https://github.com/Nocelli" target="_blank"> Rafael Nocelli Soares</a>
+          <a className='footer-link' href="https://github.com/Nocelli" target="_blank" rel="noreferrer"> Rafael Nocelli Soares</a>
         </footer>
     </div>
   )
