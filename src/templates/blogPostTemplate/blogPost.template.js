@@ -3,6 +3,8 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { graphql } from 'gatsby'
 
+import './styles.css'
+
 const blogPostTemplate = ({ data }) => {
     const { markdownRemark } = data
     const { frontmatter, html } = markdownRemark
@@ -10,11 +12,19 @@ const blogPostTemplate = ({ data }) => {
     return (
         <Layout>
             <SEO title={frontmatter.title} />
-
-            <h1>{frontmatter.title}</h1>
-            <div>Autor: {frontmatter.author}</div>
-            <div>Data: {frontmatter.date}</div>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
+            <article className='entry'>
+                <section className='entry-header'>
+                    <span className='entry-title'>{frontmatter.title}</span>
+                    <div className='entry-info'>
+                        <span className='entry-author'>Autor: {frontmatter.author}</span>
+                        <span className='entry-date'>Data: {(new Date(frontmatter.date)).toLocaleDateString()}</span>
+                    </div>
+                </section>
+                <div
+                    className='entry-body'
+                    dangerouslySetInnerHTML={{ __html: html }}
+                />
+            </article>
         </Layout>
     )
 }

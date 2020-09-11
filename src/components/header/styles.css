@@ -52,8 +52,8 @@
   @media only screen and (max-width: 600px) {
 
     #header .header-text{
-        top: 2em;
-        left: 1.5em;
+        top: 1em;
+        left: 1em;
     }
 
     #header .header-text h1 a {
@@ -62,6 +62,6 @@
     }
 
     #header .header-image {
-        height: 150px; 
+        height: 120px; 
     }
   }
