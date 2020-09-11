@@ -4,17 +4,21 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import "./styles.css"
+import Image from "../image"
 
-function Header({ siteTitle }) { 
+function Header({ siteTitle }) {
   return <header id="header">
-    <div>
+    <figure className='header-image'>
+      <Image />
+    </figure>
+    <section className='header-text'>
       <h1>
         <Link to="/" id="hash-link">
           {siteTitle}
         </Link>
       </h1>
-    </div>
-  </header> 
+    </section>
+  </header>
 }
 
 Header.propTypes = {

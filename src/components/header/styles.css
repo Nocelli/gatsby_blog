@@ -2,27 +2,65 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 91%;
-    height: 7em;
+    width: 100%;
     background: #313131;
-    margin: 0.3em 0;
-    border-radius: 1em;
+    margin: 0 0.3em 0;
     transition: 0.2s;
+
+    position: relative;
 }
 
-#header:hover {
-    background: #000 !important;
-    border: 1px solid #1ED760;
+#header .header-image {
+    width: 100%; 
+    height: 250px; 
+    overflow: hidden;
 }
 
-#header div{
-    padding: .2em;
-    margin: 0 2em;
+#header .header-text{
+    position: absolute;
+    top: 2.2em;
+    left: 3em;
 }
 
-#header div h1 a{
+#header .header-text h1 a{
     text-decoration: none;
-    font-size: 1em;
+    font-size: 2.6em;
     font-weight: 700;
-    color: #eee;
+    color: #333;
+    background-color: #eee;
+    padding: .2em;
+    line-height: 1.4em;
 }
+
+#header .header-text h1 a:after {
+    content: '_';
+    display: inline-block;
+    animation: blink 1s infinite;
+    font-weight: bold;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    #header .header-text{
+        top: 2em;
+        left: 1.5em;
+    }
+
+    #header .header-text h1 a {
+        font-size: 1.2em;
+        padding: .1em;
+    }
+
+    #header .header-image {
+        height: 150px; 
+    }
+  }
